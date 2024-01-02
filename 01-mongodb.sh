@@ -31,4 +31,4 @@ fi
 
 cp mongo.repo /etc/yum.repos.d/mongo.repo &>> $LOGFILE
 
-VALIDATE $? "Copy mongodb repo"
+VALIDATE $? "Copying mongodb repo"
