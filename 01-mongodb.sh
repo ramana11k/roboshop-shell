@@ -49,6 +49,6 @@ sed -i "s/127.0.0.0/0.0.0.0/g" /etc/mongod.conf &>> $LOGFILE
 
 VALIDATE $? "Remote access to the mongodb"
 
-systemctl restart mongod &>> $LOGFILE
+systemctl restart mongod 
 
 VALIDATE $? "restarting the mongodb"
