@@ -45,10 +45,10 @@ systemctl start mongod &>> $LOGFILE
 
 VALIDATE $? "Starting the mongodb"
 
-sed -i "s/127.0.0.0/0.0.0.0/g" /etc/mongod.conf 
+sed -i "s/127.0.0.0/0.0.0.0/g" /etc/mongod.conf &>> $LOGFILE
 
 VALIDATE $? "Remote access to the mongodb"
 
-systemctl restart mongod 
+systemctl restart mongod &>> $LOGFILE
 
 VALIDATE $? "restarting the mongodb"
