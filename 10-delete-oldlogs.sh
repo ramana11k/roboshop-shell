@@ -8,7 +8,7 @@ SOURCE_DIR="/tmp/shellscript"
 
 if [ ! -d $SOURCE_DIR ]
     then
-        echo "$R Error: Source directory $SOURCE_DIR is does not exists" $N
+        echo -e "$R Error: Source directory $SOURCE_DIR is does not exists" $N
 fi
 
 find $SOURCE_DIR -type f -mtime +14 "*.log"
