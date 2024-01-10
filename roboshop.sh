@@ -17,6 +17,6 @@ do
         INSTANCE_TYPE="t2.medium"
     fi
 
-    aws ec2 run-instances --image-id $AMI --instance-type $INSTANCE_TYPE --security-group $SG_ID
+    aws ec2 run-instances --image-id $AMI --instance-type $INSTANCE_TYPE --security-group-ids $SG_ID
 
 done 
