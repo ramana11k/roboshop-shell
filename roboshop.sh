@@ -6,7 +6,7 @@ INSTANCES=("mongodb" "user")
 
 #"redit" "mysql" "rabbitmq" "catalogue" "cart" "Shipping" "payment" "dispatch" "web"
 
-for i in ${INSTANCES[@]}
+for i in "${INSTANCES[@]}"
 
 do
     echo "Instance: $i"
