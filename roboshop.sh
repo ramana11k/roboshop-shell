@@ -14,7 +14,7 @@ do
     then
         INSTANCE_TYPE="t3.small"
     else 
-        INSTANCE_TYPE="t2.micro
+        INSTANCE_TYPE="t2.micro"
     fi
 
     aws ec2 run-instances --image-id $AMI --instance-type $INSTANCE_TYPE --security-group-ids $SG_ID
