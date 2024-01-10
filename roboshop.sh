@@ -2,7 +2,7 @@
 
 AMI=ami-03265a0778a880afb
 SG_ID=sg-0b836ea10d115e212
-INSTANCES=("mongodb" "user" )
+INSTANCES=("mongodb" "user")
 
 #"redit" "mysql" "rabbitmq" "catalogue" "cart" "Shipping" "payment" "dispatch" "web"
 
@@ -14,7 +14,7 @@ do
     then
         INSTANCE_TYPE="t3.small"
     else 
-        INSTANCE_TYPE="t2.medium"
+        INSTANCE_TYPE="t2.micro
     fi
 
     aws ec2 run-instances --image-id $AMI --instance-type $INSTANCE_TYPE --security-group-ids $SG_ID
