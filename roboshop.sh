@@ -26,21 +26,21 @@ do
     #aws ec2 run-instances --image-id ami-03265a0778a880afb --instance-type t3.small --security-group-ids sg-0b836ea10d115e212 --tag-specifications "ResourceType=instance, Tags=[{Key=Name, Value=Mongodb}]" --query 'Insstances[0].PrivateIpAddress' --output text
 
     aws route53 change-resource-record-sets \
-     --hosted-zone-id $HOSTED_ZONE\
-     --change-batch "
+    --hosted-zone-id $HOSTED_ZONE \
+    --change-batch '
     {
-        "Comment": "Testing creating a record set"
+        "Comment": "Creating a record set for roboshop"
         ,"Changes": [{
         "Action"              : "CREATE"
         ,"ResourceRecordSet"  : {
-            "Name"              : "$i.$DOMAIN_NAME"
+            "Name"              : "'$i'.'$DOMAIN_NAME'"
             ,"Type"             : "A"
             ,"TTL"              : 1
             ,"ResourceRecords"  : [{
-                "Value"         : "$IP_ADDRESS"
+                "Value"         : "'$IP_ADDRESS'"
             }]
         }
         }]
     }
-    "
+    '
 done 
