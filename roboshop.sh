@@ -2,11 +2,9 @@
 
 AMI=ami-03265a0778a880afb
 SG_ID=sg-0b836ea10d115e212
-INSTANCES=("mongodb" "user")
+INSTANCES=("mongodb" "user" "redit" "mysql" "rabbitmq" "catalogue" "cart" "Shipping" "payment" "dispatch" "web")
 HOSTED_ZONE=Z0033627RS1P0QCI2QQR
 DOMAIN_NAME=nikhildevops.online
-
-#"redit" "mysql" "rabbitmq" "catalogue" "cart" "Shipping" "payment" "dispatch" "web"
 
 for i in "${INSTANCES[@]}"
 
